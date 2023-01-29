@@ -194,6 +194,12 @@ footer a:hover i {
     height: 80px;
 }
 
+.main-work {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .main-contact{
     height: 40%;
     display: flex;
@@ -239,8 +245,12 @@ footer a:hover i {
     .skills-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+    }
+
+    .main-work img {
+        height: 50%;
     }
 }
 
