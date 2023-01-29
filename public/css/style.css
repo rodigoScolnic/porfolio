@@ -32,7 +32,7 @@ header h3 {
 header hr{
     margin-top: 10px;
     border: 1px solid lightgrey;
-    width: 150%;
+    width: 90%;
 }
 
 header nav ul {
@@ -96,8 +96,8 @@ header nav ul a:hover {
 }
 
 .abautme-section .main-photo img {
-    height: 30rem;
-    width: 30rem;
+    height: 400px;
+    width: 400px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -145,7 +145,6 @@ footer a:hover i {
     justify-content: space-around;
     align-items: flex-start;
     width: 80%;
-    height: 75%;
 }
 
 .skills-card{
@@ -213,3 +212,44 @@ footer a:hover i {
     margin-right: 30px;
 }
 
+@media (max-width: 800px){
+
+    .abautme-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .section-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-skills {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills-card{
+        border-bottom: 1px solid grey;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px){
+    .skill-logo{
+        display: none;
+    }
+
+    .skill-item {
+        width: 20%;
+    }
+}
