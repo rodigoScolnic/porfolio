@@ -239,12 +239,20 @@ footer a:hover i {
     .skills-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
 }
 
 @media (max-width: 600px){
+    .main-skills {
+        width: 120%;
+    }
+
+    .skills-card {
+        width: 100%;
+    }
+
     .skill-item img {
         height: 50px;
         width: 50px;
