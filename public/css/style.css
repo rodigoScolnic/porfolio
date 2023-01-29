@@ -245,11 +245,17 @@ footer a:hover i {
 }
 
 @media (max-width: 600px){
-    .skill-logo{
-        display: none;
+    .skill-item img {
+        height: 50px;
+        width: 50px;
     }
 
-    .skill-item {
-        width: 20%;
+    .skill-item{
+        width: 90px;
+        margin: 0 5px;
+    }
+
+    .skill-item p {
+        font-size: 12px;
     }
 }
