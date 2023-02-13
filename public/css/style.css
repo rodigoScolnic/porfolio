@@ -84,6 +84,7 @@ header nav ul a:hover {
     border: none;
     background-color: lightgreen;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .abautme-section {
