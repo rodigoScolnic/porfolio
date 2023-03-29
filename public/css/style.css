@@ -196,9 +196,48 @@ footer a:hover i {
 }
 
 .main-work {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+
+.work-card {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.work-card img {
+    height: 250px;
+}
+
+.work-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 30px;
+}
+
+.work-name h2{
+    font-weight: 600;
+}
+
+.work-name p {
+    font-style: italic;
+}
+
+.work-links {
+    width: 50%;
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.work-links a {
+    margin: 0 15px;
+}
+
+.work-links a i {
+    font-size: 30px;
 }
 
 .main-contact{
@@ -218,6 +257,8 @@ footer a:hover i {
 .contact-item i {
     margin-right: 30px;
 }
+
+
 
 @media (max-width: 800px){
 
