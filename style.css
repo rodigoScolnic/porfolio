@@ -1,378 +1,57 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'roboto';
-    background: url('https://cdn.ipadizate.com/2024/06/ios-18-rosa-claro.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* lock screen */
-
-.lock-screen {
-    display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  inset: 0; /* reemplaza width/height/position */
-  background: url('https://i.pinimg.com/736x/b8/69/2a/b8692ab79d12addbf2a902ec93149b5d.jpg') center/cover no-repeat;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
-  z-index: 10;
-}
-
-.lock-container {
-    height: 80%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.date-time h2 {
-    font-size: 80px;
-    color: rgba(127, 255, 212, 0.7);
-}
-
-.date-time h3 {
-    margin-left: 12px;
-    color: aliceblue;
-    text-shadow: 0 0 5px black;
-}
-
-.lock-notification {
-    background-color: antiquewhite;
-    width: 90%;
-    border-radius: 30px;
-    margin-top: 50px;
-    background-color: aliceblue;
-    padding: 10px;
-}
-
-.head {
-    display: flex;
-    align-items: center;
-}
-
-.head i {
-    color: aliceblue;
-    background-color: cornflowerblue;
-    padding: 10px;
-    border-radius: 50%;
-}
-
-.head p {
-    margin-left: 10px;
-    font-size: 15px;
-}
-
-.message {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 20px;
-}
-
-.message i {
-    color: aliceblue;
-    background-color: lightcoral;
-    padding: 10px;
-    border-radius: 50%;
-}
-
-.message-content {
-    margin-left: 20px;
-}
-
-.lock-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 100px;
-}
-
-.lock-icon i {
-    font-size: 30px;
-    color: rgba(127, 255, 212, 0.7);
-}
-
-.lock-icon p {
-    margin-top: 5px;
-    color: aliceblue;
-    text-shadow: 0 0 5px black;
-}
-
-.main-site {
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all 0.8s ease;
-
-}
-
-/* main site */
-
-.main-site {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 header {
-    width: 100%;
-    padding: 15px;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+}
+
+.hMenuBtn button {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 40px;
+    height: auto;
+    background-color: transparent;
+    border: none;
 }
 
-.notification {
+.hMenuBtn button span {
     display: flex;
-    gap: 15px;
-}
-
-.notification i {
-    color: rgb(90, 90, 90);
-}
-
-.time h3 {
-    color: rgb(90, 90, 90);
-}
-
-.info {
-    display: flex;
-    gap: 15px;
-}
-
-.info i {
-    color: rgb(90, 90, 90);
-}
-
-footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    bottom: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .6s ease;
-}
-
-.fa-caret-left {
-    font-size: 25px;
-}
-
-footer i {
-
-    color: aliceblue;
-}
-
-.apps {
-    margin-top: 20px;
-    width: 90%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-
-}
-
-.app {
-    width: calc(25% - 20px)
-}
-
-.app a{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-.app img{
-    width: 60px;
-    padding: 10px;
-    border-radius: 20%;
-}
-
-.app h5 {
-    margin-top: 10px;
-    color: aliceblue;
-    font-weight: bold;
-    text-shadow: 0 0 5px black;
-}
-
-.app:nth-child(1) img{
-    background-color: lightgreen;
-}
-
-.app:nth-child(2) img{
-    background-color: lightcoral;
-}
-
-.app:nth-child(3) img{
-    background-color: lightcyan;
-}
-
-.app:nth-child(4) img{
-    background-color: lightgreen;
-}
-
-.main-site.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.main-site.active + footer {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.lock-screen.hidden {
-  transform: translateY(-110%);
-  opacity: 0;
-}
-
-/* notification panel */
-
-.notification-panel.active {
-    background-color: black;
-    transform: translateY(1000px);
-    transition: all .5s;
-}
-
-.notification-panel {
-    position: absolute;
-    z-index: 2;
-    top: -1000px;
-    transition: all .5s;
-    width: 100%;
-    height: 100%;
-}
-
-.notification-panel h3, .notification-panel i  {
-    color: aliceblue;
-}
-
-.noti-options {
-    margin: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.options {
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    width: 50%;
-    height: 50px;
-    background-color: lightgray;   
-    flex: 1 1 calc(50% - 1rem);
-    transition: all .5s;
-}
-
-.options i {
-    transition: transform 0.3s ease, color 0.3s ease;
-    color: black;
-    margin-left: 15px;
-    font-size: 20px;
-}
-
-.options.animate{
-    background-color: aquamarine;
-}
-
-.options i.animate {
-    animation: rotateAnim .5s forwards;
-}
-
-@keyframes rotateAnim {
-    0% { transform: rotate(0deg) scale(1); opacity: 1; }
-    50% { transform: rotate(180deg) scale(0.7); opacity: 0; }
-    100% { transform: rotate(360deg) scale(1); opacity: 1; }
-}
-
-
-.options p {
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.icon-container {
-    width: 50px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ---- */
-
-.see-noti {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px 20px 0 0;
-    height: calc(100vh - 199px);
-    width: 100%;
-    background-color: rgb(231, 231, 231);
-}
-
-.noti-container {
-    border-radius: 20px;
-    position: absolute;
-    width: 90%;
-    margin-top: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
     background-color: white;
-}
-
-.top-noti {
-    display: flex;
-}
-
-.noti-title p {
-    font-weight: bold;
-}
-
-.noti-content {
-    margin-top: 10px;
-}
-
-.right-noti {
-    margin-left: 20px;
-}
-
-.left-noti img{
-    width: 50px;
     border-radius: 10px;
+    margin: 5px 0;
+    width: 100%;
+    height: 3px;
 }
 
-.bottom-noti {
+.hero {
+    background-color: aqua;
+    z-index: 0;
+    top: 0;
     display: flex;
-    justify-content: space-around;
-    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
 }
 
-.bottom-noti a {
-    color: lightgreen;
-    text-decoration: none;
+.circle {
+    background-color: orangered;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(40px);
 }
 
+#rNormal {
+    position: absolute;
+    width: 500px;
+}
