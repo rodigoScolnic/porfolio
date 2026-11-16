@@ -1,31 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101010">
+    <meta name="description" content="Portfolio personal de Rodry Scolnic. Desarrollo web y experiencias digitales.">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Rodry Scolnic | Desarrollo web</title>
 </head>
 <body>
-    <header>
-        <div class="hMenuBtn">
-            <button>
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <div class="logo">
-            <h2>logo</h2>
-        </div>
-        <div class="contactButton">
-            <button>C</button>
-        </div>
+    <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="Rodry Scolnic, inicio">
+            <span class="brand-mark">R<span>.</span></span>
+            <span class="brand-name">RODRY SCOLNIC</span>
+        </a>
+
+        <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+            <a class="nav-link active" href="#inicio">Inicio</a>
+            <a class="nav-link" href="#proyectos">Proyectos</a>
+            <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+        </nav>
+
+        <a class="header-cta" href="#contacto">
+            Hablemos <span aria-hidden="true">↗</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
-    <div class="hero">
-        <div class="circle"></div>
-        <img id="rNormal" src="/img/Rnormal.png" alt="Rnormal">
-    </div>
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot"></span> DESARROLLADOR WEB · ARGENTINA</p>
+                <h1>Ideas que se<br>convierten en <span>experiencias.</span></h1>
+                <p class="hero-description">
+                    Diseño y desarrollo soluciones digitales modernas, funcionales y pensadas para personas reales.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↗</span></a>
+                    <a class="button button-ghost" href="#sobre-mi">Conoceme mejor <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="hero-footnote">
+                    <span class="footnote-line"></span>
+                    <span>Creatividad, código y un poco de obsesión por los detalles.</span>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-label="Ilustración personal">
+                <div class="visual-orbit orbit-one"></div>
+                <div class="visual-orbit orbit-two"></div>
+                <div class="circle"></div>
+                <div class="visual-tag tag-top"><span>✳</span> CREATIVE DEVELOPER</div>
+                <img id="rNormal" src="img/Rnormal.png" alt="Avatar ilustrado de Rodry">
+                <div class="visual-tag tag-bottom"><span class="tag-line"></span> BUILDING THE WEB</div>
+                <div class="visual-index">01 <span>/</span> 04</div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector(".main-nav");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!isOpen));
+            menuToggle.setAttribute("aria-label", isOpen ? "Abrir menú" : "Cerrar menú");
+            mainNav.classList.toggle("is-open", !isOpen);
+        });
+
+        mainNav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Abrir menú");
+                mainNav.classList.remove("is-open");
+            });
+        });
+    </script>
 </body>
 </html>
