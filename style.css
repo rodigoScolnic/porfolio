@@ -50,9 +50,9 @@ header {
 }
 
 .hero {
-    z-index: -1;
-    position: absolute;
+    z-index: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -69,55 +69,26 @@ header {
     filter: blur(60px);
 }
 
-.hero-content {
+.shadow {
+    width: 200px;
+    height: 10px;
+    background-color: black;
     position: absolute;
+    bottom: 150px;
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#f5f5f5;
+    text-shadow: 0 0 10px orangered;
 }
 
 .hero img {
     z-index: 0;
     width: 300px;
-}
-
-.tag {
-    position: absolute;
-    background-color: #191919;
-    padding: 5px;
-    box-shadow: 0 0 5px #191919;
-    
-}
-
-#javascript {
-    top: 100px;
-    left: 0;
-    border-left: 2px solid crimson;
-    border-radius: 0 5px 5px 0;
-    transform: rotate(-15deg);
-}
-
-#github {
-    top: 50px;
-    right: 10px;
-    border-right: 2px solid yellowgreen;
-    border-radius: 5px 0 0 5px;
-    transform: rotate(15deg);
-}
-
-#sql {
-    top: 200px;
-    right: 20px;
-    border-right: 2px solid cornflowerblue;
-    border-radius: 5px 0 0 5px;
-    transform: rotate(15deg);
-}
-
-#react {
-    top: 200px;
-    left: 50px;
-    border-left: 2px solid palevioletred;
-    border-radius: 0 5px 5px 0;
-    transform: rotate(-15deg);
-}
-
-.hero img:hover .tag {
-    transform: rotate(15deg);
 }
