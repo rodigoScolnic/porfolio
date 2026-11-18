@@ -625,3 +625,47 @@ header {
     .work-carousel { scroll-behavior: auto; }
     .project-card, .work-arrow, .project-links a span { transition: none; }
 }
+
+
+/* Previsualizaciones reales de proyectos */
+.project-preview {
+    position: relative;
+    width: 100%;
+    height: 155px;
+    margin: 15px 0 17px;
+    overflow: hidden;
+    border-radius: 11px;
+    isolation: isolate;
+    background: #202020;
+    border: 1px solid rgba(255,255,255,.09);
+}
+
+.project-preview iframe {
+    display: block;
+    width: 400%;
+    height: 620px;
+    border: 0;
+    transform: scale(.25);
+    transform-origin: top left;
+    background: #fff;
+    pointer-events: none;
+}
+
+.project-preview::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+@media (max-width: 540px) {
+    .project-preview {
+        height: 165px;
+    }
+
+    .project-preview iframe {
+        height: 660px;
+    }
+}
