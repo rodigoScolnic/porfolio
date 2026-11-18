@@ -4,175 +4,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#101010">
-    <meta name="description" content="Portfolio de Rodry Scolnic. Desarrollo web, aplicaciones y soluciones digitales.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Portfolio personal de Rodry Scolnic. Desarrollo web y experiencias digitales.">
     <link rel="stylesheet" href="style.css">
     <title>Rodry Scolnic | Desarrollo web</title>
 </head>
 <body>
-    <header class="site-header">
-        <a class="logo" href="#inicio" aria-label="Volver al inicio"><span>R</span>Scolnic</a>
-        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
-            <span></span><span></span>
-        </button>
-        <nav class="site-nav" aria-label="Navegación principal">
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#stack">Tecnologías</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+    <header>
+        <div class="hMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logo">
+            <h2><span>R</span>Scolnic</h2>
+        </div>
     </header>
 
-    <main>
-        <section class="hero" id="inicio">
-            <div class="hero-glow"></div>
-            <div class="hero-copy">
-                <p class="eyebrow"><span class="status-dot"></span> DESARROLLADOR WEB</p>
-                <h1>Ideas claras.<br><span>Soluciones reales.</span></h1>
-                <p class="hero-description">Diseño y desarrollo experiencias web funcionales, cuidando tanto lo que pasa detrás del código como lo que ve y usa cada persona.</p>
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#proyectos">Ver proyectos</a>
-                    <a class="text-link" href="#sobre-mi">Conocer más</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-orbit"></div>
-                <div class="chibiBox">
-                    <img class="hero-chibi" src="img/Ryeah.png" alt="Chibi de Rodry celebrando">
-                    <img class="tech-logo tech-react" src="img/reactLogo.png" alt="React">
-                    <img class="tech-logo tech-js" src="img/jsLogo.png" alt="JavaScript">
-                    <img class="tech-logo tech-sql" src="img/sqlLogo.png" alt="SQL">
-                    <img class="tech-logo tech-github" src="img/githubLogo.png" alt="GitHub">
-                </div>
-            </div>
-            <a class="scroll-cue" href="#sobre-mi">Deslizá para conocer más <span></span></a>
-        </section>
+    <div class="hero">
+        <div class="circle"></div>
+        <div class="chibiBox">
+            <img src="/img/Ryeah.png" alt="">
+            <img id="reactLogo" src="/img/reactLogo.png" alt="">
+            <img id="jsLogo" src="/img/jsLogo.png" alt="">
+            <img id="sqlLogo" src="/img/sqlLogo.png" alt="">
+            <img id="githubLogo" src="/img/githubLogo.png" alt="">
+        </div>
+        <div class="hero-content">
+            <a href="">contactame<img id="handBtn" src="/img/handBtn.png" alt=""></a>   
+        </div>
+    </div>
 
-        <section class="about section-shell" id="sobre-mi">
-            <div class="about-visual">
-                <div class="about-glow"></div>
-                <img src="img/algo.png" alt="Chibi de Rodry asomándose" class="about-chibi">
+    <section class="about">
+        <div class="about-content">
+            <img id="rMira" src="/img/algo.png" alt="">
+            <div class="items">
+                <h5>curioso</h5><h5>comprometido</h5><h5>creativo</h5><h5>resolutivo</h5>
             </div>
-            <div class="about-copy">
-                <p class="eyebrow">UN POCO SOBRE MÍ</p>
-                <h2>Detrás del código<br><span>hay una persona curiosa.</span></h2>
-                <p>Me gusta entender cómo funcionan las cosas, encontrar soluciones y convertir buenas ideas en algo concreto.</p>
-                <p>Soy desarrollador web y disfruto el proceso completo: pensar cómo debería funcionar una aplicación, construirla y prestar atención a esos detalles que hacen que usarla sea simple y agradable.</p>
-                <div class="qualities" aria-label="Cualidades">
-                    <span>Curioso</span>
-                    <span>Comprometido</span>
-                    <span>Creativo</span>
-                    <span>Resolutivo</span>
-                </div>
-            </div>
-        </section>
+            <h2>Detras del codigo</h2>
+            <p>Me gusta entender cómo funcionan las cosas, encontrar soluciones y convertir buenas ideas en algo concreto.
+            Soy desarrollador web y disfruto especialmente el proceso de crear: desde pensar cómo debería funcionar una aplicación hasta cuidar esos pequeños detalles que hacen que una experiencia sea más intuitiva, atractiva y fácil de usar.</p>
+        </div>
+    </section>
 
-        <section class="stack-section section-shell" id="stack">
-            <div class="section-heading">
-                <p class="eyebrow">HERRAMIENTAS</p>
-                <h2>Tecnología para<br><span>construir buenas ideas.</span></h2>
-                <p>Trabajo con tecnologías que me permiten desarrollar interfaces, conectar datos y crear aplicaciones completas.</p>
-            </div>
-            <div class="stack-content">
-                <div class="stack-list">
-                    <div class="stack-item"><img src="img/jsLogo.png" alt=""><div><h3>JavaScript</h3><p>Interactividad, lógica y desarrollo de aplicaciones.</p></div></div>
-                    <div class="stack-item"><img src="img/reactLogo.png" alt=""><div><h3>React</h3><p>Interfaces por componentes y experiencias dinámicas.</p></div></div>
-                    <div class="stack-item"><span class="stack-mark">DB</span><div><h3>SQL</h3><p>Consultas, relaciones y gestión de información.</p></div></div>
-                    <div class="stack-item"><span class="stack-mark">N</span><div><h3>Node.js</h3><p>Backend, APIs y lógica del lado del servidor.</p></div></div>
-                    <div class="stack-item"><span class="stack-mark">G</span><div><h3>Git & GitHub</h3><p>Control de versiones y trabajo con repositorios.</p></div></div>
-                    <div class="stack-item"><span class="stack-mark">UI</span><div><h3>HTML & CSS</h3><p>Estructura, diseño responsive y accesibilidad.</p></div></div>
-                </div>
-                <div class="stack-character">
-                    <img src="img/Rworking.png" alt="Chibi de Rodry trabajando">
-                </div>
-            </div>
-        </section>
-
-        <section class="projects-section section-shell" id="proyectos">
-            <div class="section-heading projects-heading">
+    <section class="work" id="work">
+        <div class="work-container">
+            <div class="work-heading">
                 <div>
-                    <p class="eyebrow">TRABAJO REAL</p>
-                    <h2>Una muestra de<br><span>lo que hago.</span></h2>
+                    <h2>Una muestra de lo que hago</h2>
                 </div>
-                <p>Proyectos personales y desarrollos donde pongo en práctica distintas herramientas y formas de resolver problemas.</p>
+                <div class="work-controls" aria-label="Controles del carrusel">
+                    <button class="work-arrow" id="workPrev" type="button" aria-label="Proyecto anterior">&lsaquo;</button>
+                    <button class="work-arrow" id="workNext" type="button" aria-label="Proyecto siguiente">&rsaquo;</button>
+                </div>
             </div>
 
-            <div class="projects-grid">
-                <article class="project-card project-featured">
+            <div class="work-carousel" id="workCarousel" tabindex="0" aria-label="Carrusel de proyectos">
+                <article class="project-card project-card-featured">
+                    <div class="project-topline"><span class="project-type">Web / servicios digitales</span></div>
                     <div class="project-preview"><iframe src="https://codexatechco.com.ar/" title="Vista previa de Codexa" loading="lazy"></iframe></div>
-                    <div class="project-body"><p class="project-kind">Web / servicios digitales</p><h3>Codexa</h3><p>Un espacio digital para acercar tecnología, desarrollo web y automatización a negocios y personas.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="https://codexatechco.com.ar/" target="_blank" rel="noopener noreferrer">Ver sitio</a><a href="https://github.com/rodigoScolnic/codexaWeb" target="_blank" rel="noopener noreferrer">Código fuente</a></div></div>
+                    <div class="project-info">
+                        <h3>Codexa</h3>
+                        <p>Un espacio digital para acercar tecnología, desarrollo web y automatización a negocios y personas.</p>
+                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <div class="project-links">
+                            <a href="https://codexatechco.com.ar/" target="_blank" rel="noopener noreferrer">Ver sitio</a>
+                            <a href="https://github.com/rodigoScolnic/codexaWeb" target="_blank" rel="noopener noreferrer">Código</a>
+                        </div>
+                    </div>
                 </article>
+
                 <article class="project-card">
+                    <div class="project-topline"><span class="project-type">E-commerce</span></div>
                     <div class="project-preview"><iframe src="https://verdebendito.onrender.com/" title="Vista previa de VerdeBendito" loading="lazy"></iframe></div>
-                    <div class="project-body"><p class="project-kind">E-commerce</p><h3>VerdeBendito</h3><p>Tienda online con catálogo, navegación y una experiencia de compra simple.</p><div class="project-tags"><span>JavaScript</span><span>Node.js</span><span>SQL</span></div><div class="project-links"><a href="https://verdebendito.onrender.com/" target="_blank" rel="noopener noreferrer">Ver sitio</a><a href="https://github.com/rodigoScolnic/VerdeBendito" target="_blank" rel="noopener noreferrer">Código fuente</a></div></div>
+                    <div class="project-info">
+                        <h3>VerdeBendito</h3>
+                        <p>Proyecto de tienda online, con foco en catálogo, navegación y experiencia de compra.</p>
+                        <div class="project-tags"><span>JavaScript</span><span>Node.js</span><span>E-commerce</span></div>
+                        <div class="project-links"><a href="https://verdebendito.onrender.com/" target="_blank" rel="noopener noreferrer">Ver sitio</a><a href="https://github.com/rodigoScolnic/VerdeBendito" target="_blank" rel="noopener noreferrer">Código</a></div>
+                    </div>
                 </article>
+
                 <article class="project-card">
+                    <div class="project-topline"><span class="project-type">E-commerce</span></div>
                     <div class="project-preview"><iframe src="https://alta-burger.onrender.com/" title="Vista previa de Alta Burger" loading="lazy"></iframe></div>
-                    <div class="project-body"><p class="project-kind">E-commerce</p><h3>Alta Burger</h3><p>Sitio web orientado a la venta de hamburguesas y presentación de productos.</p><div class="project-tags"><span>EJS</span><span>JavaScript</span><span>CSS</span></div><div class="project-links"><a href="https://alta-burger.onrender.com/" target="_blank" rel="noopener noreferrer">Ver sitio</a><a href="https://github.com/rodigoScolnic/AltaBurger" target="_blank" rel="noopener noreferrer">Código fuente</a></div></div>
+                    <div class="project-info">
+                        <h3>Alta Burger</h3>
+                        <p>Sitio web orientado a la venta de hamburguesas, con una propuesta visual enfocada en el producto.</p>
+                        <div class="project-tags"><span>EJS</span><span>JavaScript</span><span>Web</span></div>
+                        <div class="project-links"><a href="https://alta-burger.onrender.com/" target="_blank" rel="noopener noreferrer">Ver sitio</a><a href="https://github.com/rodigoScolnic/AltaBurger" target="_blank" rel="noopener noreferrer">Código</a></div>
+                    </div>
                 </article>
-                <article class="project-card project-text-card">
-                    <div class="project-symbol">GS</div><div class="project-body"><p class="project-kind">Proyecto integrador</p><h3>GameShark</h3><p>Plataforma de comercio electrónico desarrollada como proyecto integrador.</p><div class="project-tags"><span>JavaScript</span><span>E-commerce</span></div><div class="project-links"><a href="https://github.com/rodigoScolnic/gameShark-PI" target="_blank" rel="noopener noreferrer">Ver repositorio</a></div></div>
-                </article>
-                <article class="project-card project-text-card">
-                    <div class="project-symbol">AB</div><div class="project-body"><p class="project-kind">Herramienta de gestión</p><h3>App Budget</h3><p>Aplicación para cargar presupuestos y gestionarlos mediante operaciones CRUD.</p><div class="project-tags"><span>EJS</span><span>CRUD</span><span>JSON</span></div><div class="project-links"><a href="https://github.com/rodigoScolnic/appBudget" target="_blank" rel="noopener noreferrer">Ver repositorio</a></div></div>
-                </article>
+
                 <article class="project-card">
+                    <div class="project-topline"><span class="project-type">Aplicación</span></div>
+                    <div class="project-art art-game"><span class="art-symbol">⌁</span><strong>game<br>shark</strong></div>
+                    <div class="project-info">
+                        <h3>GameShark</h3>
+                        <p>Proyecto integrador: desarrollo de una plataforma de comercio electrónico.</p>
+                        <div class="project-tags"><span>JavaScript</span><span>E-commerce</span></div>
+                        <div class="project-links"><a href="https://github.com/rodigoScolnic/gameShark-PI" target="_blank" rel="noopener noreferrer">Ver repositorio <span>↗</span></a></div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-topline"><span class="project-type">Herramienta</span></div>
+                    <div class="project-art art-budget"><span class="art-symbol">$</span><strong>appBudget</strong></div>
+                    <div class="project-info">
+                        <h3>App Budget</h3>
+                        <p>Aplicación sencilla para cargar presupuestos y guardarlos mediante operaciones CRUD con JSON.</p>
+                        <div class="project-tags"><span>EJS</span><span>CRUD</span><span>JSON</span></div>
+                        <div class="project-links"><a href="https://github.com/rodigoScolnic/appBudget" target="_blank" rel="noopener noreferrer">Ver repositorio <span>↗</span></a></div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-topline"><span class="project-type">Aplicación</span></div>
                     <div class="project-preview"><iframe src="https://mediccrm.onrender.com/" title="Vista previa de MedicCRM" loading="lazy"></iframe></div>
-                    <div class="project-body"><p class="project-kind">Aplicación de gestión</p><h3>MedicCRM</h3><p>Herramienta de gestión enfocada en organizar información y procesos.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="https://mediccrm.onrender.com/" target="_blank" rel="noopener noreferrer">Ver sitio</a><a href="https://github.com/rodigoScolnic/MedicCRM" target="_blank" rel="noopener noreferrer">Código fuente</a></div></div>
+                    <div class="project-info">
+                        <h3>MedicCRM</h3>
+                        <p>Proyecto de gestión con una propuesta enfocada en organizar información y procesos.</p>
+                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <div class="project-links"><a href="https://mediccrm.onrender.com/" target="_blank" rel="noopener noreferrer">Ver sitio</a><a href="https://github.com/rodigoScolnic/MedicCRM" target="_blank" rel="noopener noreferrer">Código</a></div>
+                    </div>
                 </article>
+
                 <article class="project-card">
+                    <div class="project-topline"><span class="project-type">Aplicación</span></div>
                     <div class="project-preview"><iframe src="https://crmaddis.onrender.com/" title="Vista previa de CRMaddis" loading="lazy"></iframe></div>
-                    <div class="project-body"><p class="project-kind">Aplicación de gestión</p><h3>CRMaddis</h3><p>Desarrollo de una herramienta para organizar información y hacer seguimiento.</p><div class="project-tags"><span>JavaScript</span><span>CRM</span></div><div class="project-links"><a href="https://crmaddis.onrender.com/" target="_blank" rel="noopener noreferrer">Ver sitio</a><a href="https://github.com/rodigoScolnic/CRMaddis" target="_blank" rel="noopener noreferrer">Código fuente</a></div></div>
+                    <div class="project-info">
+                        <h3>CRMaddis</h3>
+                        <p>Proyecto de desarrollo de una herramienta de gestión y seguimiento.</p>
+                        <div class="project-tags"><span>JavaScript</span><span>CRM</span></div>
+                        <div class="project-links"><a href="https://crmaddis.onrender.com/" target="_blank" rel="noopener noreferrer">Ver sitio</a><a href="https://github.com/rodigoScolnic/CRMaddis" target="_blank" rel="noopener noreferrer">Código</a></div>
+                    </div>
                 </article>
-                <article class="project-card project-text-card">
-                    <div class="project-symbol">JS</div><div class="project-body"><p class="project-kind">Práctica frontend</p><h3>Calculator</h3><p>Proyecto práctico para trabajar lógica e interacciones con JavaScript.</p><div class="project-tags"><span>JavaScript</span><span>Frontend</span></div><div class="project-links"><a href="https://github.com/rodigoScolnic/Calculator" target="_blank" rel="noopener noreferrer">Ver repositorio</a></div></div>
+
+                <article class="project-card">
+                    <div class="project-topline"><span class="project-type">JavaScript</span></div>
+                    <div class="project-art art-calc"><span class="art-symbol">÷</span><strong>Calculator</strong></div>
+                    <div class="project-info">
+                        <h3>Calculator</h3>
+                        <p>Proyecto práctico para trabajar lógica e interacciones con JavaScript.</p>
+                        <div class="project-tags"><span>JavaScript</span><span>Frontend</span></div>
+                        <div class="project-links"><a href="https://github.com/rodigoScolnic/Calculator" target="_blank" rel="noopener noreferrer">Ver repositorio <span>↗</span></a></div>
+                    </div>
                 </article>
-                <article class="project-card project-text-card">
-                    <div class="project-symbol">IMG</div><div class="project-body"><p class="project-kind">Recursos visuales</p><h3>Biblioteca de imágenes</h3><p>Repositorio de recursos gráficos utilizados en distintos proyectos.</p><div class="project-tags"><span>Assets</span><span>Imágenes</span></div><div class="project-links"><a href="https://github.com/rodigoScolnic/imagenes" target="_blank" rel="noopener noreferrer">Ver repositorio</a></div></div>
+
+                <article class="project-card">
+                    <div class="project-topline"><span class="project-type">Recursos</span></div>
+                    <div class="project-art art-assets"><span class="art-symbol">✺</span><strong>IMG / ASSETS</strong></div>
+                    <div class="project-info">
+                        <h3>Recursos visuales</h3>
+                        <p>Repositorio de imágenes y recursos gráficos utilizados en distintos proyectos.</p>
+                        <div class="project-tags"><span>Assets</span><span>Imágenes</span></div>
+                        <div class="project-links"><a href="https://github.com/rodigoScolnic/imagenes" target="_blank" rel="noopener noreferrer">Ver repositorio <span>↗</span></a></div>
+                    </div>
                 </article>
             </div>
-            <a class="all-projects" href="https://github.com/rodigoScolnic" target="_blank" rel="noopener noreferrer">Explorar GitHub</a>
-        </section>
 
-        <section class="contact-section section-shell" id="contacto">
-            <div class="contact-copy">
-                <p class="eyebrow">¿TENÉS UNA IDEA?</p>
-                <h2>Hablemos de<br><span>lo que podemos crear.</span></h2>
-                <p>Si tenés un proyecto en mente, querés trabajar conmigo o simplemente intercambiar ideas, me gustaría saber de vos.</p>
-                <a class="button button-primary" href="https://github.com/rodigoScolnic" target="_blank" rel="noopener noreferrer">Contactarme en GitHub</a>
+            <div class="work-footer">
+                <div class="work-dots" id="workDots" aria-label="Paginación del carrusel"></div>
+                <a class="github-more" href="https://github.com/rodigoScolnic" target="_blank" rel="noopener noreferrer">Más en GitHub</a>
             </div>
-            <div class="contact-visual"><div class="contact-glow"></div><img src="img/Rseñalando.png" alt="Chibi de Rodry señalando"></div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <a class="logo" href="#inicio"><span>R</span>Scolnic</a>
-        <p>Hecho con curiosidad y bastante café.</p>
-        <a href="https://github.com/rodigoScolnic" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </footer>
+        </div>
+    </section>
 
     <script>
-        const menuButton = document.querySelector('.menu-toggle');
-        const navigation = document.querySelector('.site-nav');
+        (() => {
+            const carousel = document.querySelector('#workCarousel');
+            const prev = document.querySelector('#workPrev');
+            const next = document.querySelector('#workNext');
+            const dots = document.querySelector('#workDots');
+            if (!carousel || !prev || !next || !dots) return;
 
-        menuButton.addEventListener('click', () => {
-            const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-            menuButton.setAttribute('aria-expanded', String(!isOpen));
-            menuButton.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
-            navigation.classList.toggle('is-open', !isOpen);
-            document.body.classList.toggle('menu-open', !isOpen);
-        });
+            const cards = [...carousel.querySelectorAll('.project-card')];
+            const getStep = () => {
+                const card = cards[0];
+                if (!card) return 0;
+                const styles = getComputedStyle(carousel);
+                return card.getBoundingClientRect().width + (parseFloat(styles.columnGap || styles.gap) || 0);
+            };
 
-        navigation.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuButton.setAttribute('aria-expanded', 'false');
-                menuButton.setAttribute('aria-label', 'Abrir menú');
-                navigation.classList.remove('is-open');
-                document.body.classList.remove('menu-open');
+            cards.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'work-dot';
+                dot.setAttribute('aria-label', 'Ir al proyecto ' + (index + 1));
+                dot.addEventListener('click', () => carousel.scrollTo({ left: getStep() * index, behavior: 'smooth' }));
+                dots.appendChild(dot);
             });
-        });
+
+            const update = () => {
+                const index = Math.round(carousel.scrollLeft / (getStep() || 1));
+                [...dots.children].forEach((dot, i) => {
+                    dot.classList.toggle('is-active', i === index);
+                    dot.setAttribute('aria-current', i === index ? 'true' : 'false');
+                });
+                prev.disabled = carousel.scrollLeft <= 2;
+                next.disabled = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 2;
+            };
+
+            prev.addEventListener('click', () => carousel.scrollBy({ left: -getStep(), behavior: 'smooth' }));
+            next.addEventListener('click', () => carousel.scrollBy({ left: getStep(), behavior: 'smooth' }));
+            carousel.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update);
+            update();
+        })();
     </script>
 </body>
 </html>
