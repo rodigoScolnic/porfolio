@@ -161,7 +161,7 @@ header {
     position: relative;
     width: min(100%, 420px);
     min-height: 390px;
-    padding: 145px 24px 30px;
+    padding: 100px 24px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -200,6 +200,18 @@ header {
     top: -128px;
     left: 0;
     width: 300px;
+}
+
+.about-content .items {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.about-content .items h5 {
+    background-color: rgba(255, 68, 0, 0.3);
+    padding: 3px 10px;
+    color: var(--muted);
 }
 
 @media (max-width: 360px) {
