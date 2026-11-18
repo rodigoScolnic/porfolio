@@ -50,13 +50,14 @@ header {
 }
 
 .hero {
+
     z-index: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
 }
 
 .circle {
@@ -69,27 +70,161 @@ header {
     filter: blur(60px);
 }
 
-.shadow {
-    width: 200px;
-    height: 10px;
-    background-color: black;
-    position: absolute;
-    bottom: 150px;
-    border-radius: 50%;
-    filter: blur(10px);
-}
-
 .hero-content {
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    color:#f5f5f5;
-    text-shadow: 0 0 10px orangered;
+    width: 100%;
+}
+
+.hero-content a {
+    position: relative;
+    bottom: 20px;
+    background-color: #ff4500;
+    border-radius: 10px;
+    padding: 5px 50px;
+    width: 300px;
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: 500;
+    box-shadow: 0 0 15px crimson;
+}
+
+#handBtn {
+    position: absolute;
+    right: 50px;
+    bottom: -15px;
+    width: 40px;
 }
 
 .hero img {
     z-index: 0;
+    width: 250px;
+}
+
+.chibiBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+#reactLogo {
+    position: absolute;
+    left: 10px;
+    top: 175px;
+    width: 50px;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+#jsLogo {
+    position: absolute;
+    right: 10px;
+    top: 150px;
+    width: 50px;
+    animation: flotar 2s ease-in-out infinite;
+}
+
+#sqlLogo {
+    position: absolute;
+    right: 10px;
+    top: 80px;
+    width: 40px;
+    animation: flotar2 2.3s ease-in-out infinite;
+}
+
+#githubLogo {
+    position: absolute;
+    left: 10px;
+    top: 100px;
+    width: 50px;
+    animation: flotar2 3s ease-in-out infinite;
+}
+
+#about {
+    background-color: rgba(220, 20, 60, 0.5);
+    position: absolute;
+    z-index: 3;
+    left: 0;
+}
+
+/*---------------------*/
+
+.about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    position: absolute;
+    border: 4px solid white;
+    padding: 30px;
     width: 300px;
-    border: 1px solid red;
+}
+
+.about-content h2 {
+    color: #ff4500;
+}
+
+.about-content h4 {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.about img {
+    position: absolute;
+    top: -128px;
+    left: 0;
+    width: 300px;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(15deg);
+        filter: drop-shadow(0 0 5px orange);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes flotar2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(-15deg);
+        filter: drop-shadow(0 0 5px orange);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 5px orange);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
