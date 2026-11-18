@@ -75,11 +75,27 @@ img { display: block; max-width: 100%; }
 .hero-orbit { position: absolute; width: min(82%, 420px); aspect-ratio: 1; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; box-shadow: 0 0 0 34px rgba(255,255,255,.018), 0 0 0 68px rgba(255,255,255,.012); }
 .chibiBox { position: relative; width: min(100%, 440px); display: flex; justify-content: center; align-items: center; }
 .hero-chibi { width: min(75%, 330px); position: relative; z-index: 2; filter: drop-shadow(0 18px 24px rgba(0,0,0,.3)); }
-.tech-logo { position: absolute; z-index: 3; width: 48px; object-fit: contain; animation: float 4s ease-in-out infinite; }
-.tech-react { left: 8%; top: 42%; }
-.tech-js { right: 8%; top: 48%; animation-delay: -.8s; }
-.tech-sql { right: 18%; top: 14%; width: 42px; animation-delay: -1.5s; }
-.tech-github { left: 17%; top: 17%; animation-delay: -2.2s; }
+.tech-logo {
+    position: absolute;
+    z-index: 3;
+    width: 48px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.28));
+    transition: transform .45s cubic-bezier(.2,.8,.2,1), filter .3s ease;
+    animation: float 3.2s ease-in-out infinite;
+}
+/* Los cuatro iconos quedan agrupados sobre la mano del chibi. */
+.tech-react { left: 37%; top: 43%; animation-delay: -.4s; }
+.tech-js { left: 48%; top: 31%; animation-delay: -1.1s; }
+.tech-sql { left: 54%; top: 45%; width: 42px; animation-delay: -1.8s; }
+.tech-github { left: 42%; top: 57%; animation-delay: -2.5s; }
+
+/* Al acercar el mouse, los iconos se abren desde la mano. */
+.chibiBox:hover .tech-logo { animation-play-state: paused; }
+.chibiBox:hover .tech-js { transform: translate(-25px, -25px) rotate(-20deg); }
+.chibiBox:hover .tech-react { transform: translate(-30px, 25px) rotate(-20deg); }
+.chibiBox:hover .tech-sql { transform: translate(30px, 25px) rotate(20deg); }
+.chibiBox:hover .tech-github { transform: translate(25px, -25px) rotate(20deg); }
 .scroll-cue { position: absolute; bottom: 25px; left: 0; display: flex; align-items: center; gap: 13px; color: #777; font-size: .65rem; text-decoration: none; }
 .scroll-cue span { display: block; height: 1px; width: 36px; background: var(--accent); }
 
@@ -141,7 +157,7 @@ img { display: block; max-width: 100%; }
 .site-footer p { color: #777; font-size: .65rem; }
 .site-footer > a:last-child { border-bottom: 1px solid #555; padding-bottom: 4px; }
 
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-11px); } }
+@keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -9px; } }
 
 @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -173,6 +189,10 @@ img { display: block; max-width: 100%; }
     .hero-orbit { width: min(75%, 320px); }
     .tech-logo { width: 39px; }
     .tech-sql { width: 34px; }
+    .tech-react { left: 35%; top: 44%; }
+    .tech-js { left: 47%; top: 32%; }
+    .tech-sql { left: 55%; top: 46%; }
+    .tech-github { left: 41%; top: 57%; }
     .scroll-cue { bottom: 17px; left: 50%; transform: translateX(-50%); white-space: nowrap; }
     .about { min-height: auto; grid-template-columns: 1fr; gap: 10px; padding-top: 65px; padding-bottom: 75px; }
     .about-visual { min-height: 280px; }
