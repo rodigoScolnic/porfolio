@@ -203,7 +203,9 @@ header {
 }
 
 .about-content .items {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     justify-content: center;
     gap: 10px;
 }
@@ -212,13 +214,6 @@ header {
     background-color: rgba(255, 68, 0, 0.3);
     padding: 3px 5px;
     color: var(--muted);
-}
-
-#rCanchero {
-    position: absolute;
-    width: 100px;
-    right: -50px;
-    bottom: -20px;
 }
 
 @media (max-width: 360px) {
