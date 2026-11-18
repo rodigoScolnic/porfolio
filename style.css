@@ -527,11 +527,14 @@ header {
 }
 
 .project-links a, .github-more {
-    color: var(--accent);
+    color: white;
+    border-radius: 5px;
     font-size: .73rem;
     font-weight: 600;
     text-decoration: none;
     transition: color .2s ease;
+    background-color: var(--accent);
+    padding: 5px;
 }
 
 .project-links a:hover, .github-more:hover {
