@@ -216,9 +216,9 @@ header {
 
 #rCanchero {
     position: absolute;
-    width: 150px;
+    width: 100px;
     right: -50px;
-    bottom: -50px;
+    bottom: -20px;
 }
 
 @media (max-width: 360px) {
