@@ -293,9 +293,6 @@ header {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background:
-        radial-gradient(ellipse at 85% 15%, rgba(255, 69, 0, 0.09), transparent 35%),
-        var(--bg);
 }
 
 .work-container {
